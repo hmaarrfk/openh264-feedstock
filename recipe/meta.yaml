@@ -1,8 +1,7 @@
-{% set name = "openh264" %}
 {% set version = "2.6.0" %}
 
 package:
-  name: {{ name }}
+  name: openh264
   version: {{ version }}
 
 source:
@@ -21,7 +20,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - pkg-config
     - nasm
     - make    # [unix]
