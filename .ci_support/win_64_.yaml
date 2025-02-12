@@ -9,6 +9,6 @@ channel_targets:
 cxx_compiler:
 - vs2019
 openh264:
-- 2.4.1
+- 2.5.0
 target_platform:
 - win-64

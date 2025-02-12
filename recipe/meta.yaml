@@ -1,13 +1,12 @@
-{% set name = "openh264" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 package:
-  name: {{ name }}
+  name: openh264
   version: {{ version }}
 
 source:
   url: https://github.com/cisco/openh264/archive/v{{ version }}.tar.gz
-  sha256: 94c8ca364db990047ec4ec3481b04ce0d791e62561ef5601443011bdc00825e3
+  sha256: 558544ad358283a7ab2930d69a9ceddf913f4a51ee9bf1bfb9e377322af81a69
 
 build:
   number: 0
@@ -21,7 +20,7 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - pkg-config
     - nasm
     - make    # [unix]
